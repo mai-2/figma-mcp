@@ -1,0 +1,452 @@
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+dl,
+li,
+dt,
+dd,
+p,
+div,
+span,
+img,
+a,
+table,
+tr,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: normal;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+header,
+footer,
+nav,
+section,
+article,
+main,
+aside,
+figure,
+figcaption {
+  display: block;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  margin: 0;
+  padding: 0;
+  border: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  background: transparent;
+  cursor: pointer;
+  font: inherit;
+}
+
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+  vertical-align: top;
+}
+
+body {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #111;
+  font-family: "Noto Sans JP", sans-serif;
+  background: #fafafa;
+}
+
+.c-button {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px 30px;
+  border: 2px solid #111;
+  border-radius: 60px;
+  background-color: #fff;
+  color: #111;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.7;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.c-heading {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 14px;
+}
+.c-heading__en {
+  font-family: "Montserrat", sans-serif;
+  font-size: 50px;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  line-height: 1;
+}
+@media screen and (max-width: 767px) {
+  .c-heading__en {
+    font-size: 38px;
+  }
+}
+.c-heading__ja {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  letter-spacing: 0.08em;
+  line-height: 1;
+}
+@media screen and (max-width: 767px) {
+  .c-heading__ja {
+    font-size: 14px;
+  }
+}
+
+.step1-title {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  gap: 10px;
+}
+@media screen and (max-width: 767px) {
+  .step1-title {
+    gap: 16px;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+  }
+}
+.step1-title__text {
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 1.7;
+  letter-spacing: 0.1em;
+  color: #111111;
+}
+@media screen and (max-width: 767px) {
+  .step1-title__text {
+    font-size: 18px;
+  }
+}
+.step1-title__img {
+  width: 85px;
+  height: 110px;
+}
+
+.c-step-item {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+  padding: 50px 26px 26px;
+  border: 3px solid #111;
+  border-radius: 30px;
+  background-color: #fafafa;
+  position: relative;
+  text-align: center;
+}
+.c-step-item--secondary .c-step-item__icon {
+  background-color: #fabe00;
+}
+.c-step-item__icon {
+  position: absolute;
+  top: -45px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background-color: #f5810e;
+  border: 3px solid #111;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 3px;
+}
+.c-step-item__icon-step {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 1;
+  letter-spacing: 0.1em;
+  color: #111;
+}
+.c-step-item__icon-number {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 1;
+  letter-spacing: 0.1em;
+  color: #fff;
+}
+.c-step-item__img {
+  width: 200px;
+  height: 200px;
+}
+@media screen and (max-width: 767px) {
+  .c-step-item__img {
+    width: 160px;
+    height: 160px;
+  }
+}
+.c-step-item__text {
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.7;
+  letter-spacing: 0.03em;
+  color: #111;
+}
+
+.p-step1, .p-step2 {
+  padding: 100px 0;
+}
+@media screen and (max-width: 767px) {
+  .p-step1, .p-step2 {
+    padding: 60px 0;
+  }
+}
+.p-step1__inner, .p-step2__inner {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.p-step1__items, .p-step2__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 24px;
+}
+@media screen and (max-width: 767px) {
+  .p-step1__items, .p-step2__items {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 65px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.step-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 85px;
+  padding: 40px 0;
+  background-color: #FFFBF0;
+}
+@media screen and (max-width: 767px) {
+  .step-box {
+    gap: 65px;
+    padding: 54px 40px 48px;
+  }
+}
+
+.merit-box {
+  display: inline-block;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 20px 0;
+}
+@media screen and (max-width: 767px) {
+  .merit-box {
+    padding: 10px 20px;
+  }
+}
+
+.merit-box__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 50px;
+  width: 920px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 767px) {
+  .merit-box__content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 18px;
+    width: 100%;
+  }
+}
+
+.merit-box__text-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 16px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.merit-box__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 28px;
+}
+@media screen and (max-width: 767px) {
+  .merit-box__title {
+    gap: 14px;
+  }
+}
+
+.merit-box__number {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 110px;
+  line-height: 1;
+  color: #fabe00;
+  width: 42px;
+}
+@media screen and (max-width: 767px) {
+  .merit-box__number {
+    font-size: 70px;
+  }
+}
+
+.merit-box__title-text {
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.7;
+  letter-spacing: 0.1em;
+  color: #111;
+}
+@media screen and (max-width: 767px) {
+  .merit-box__title-text {
+    font-size: 16px;
+  }
+}
+
+.merit-box__description {
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 2;
+  color: #111;
+}
+@media screen and (max-width: 767px) {
+  .merit-box__description {
+    font-size: 14px;
+  }
+}
+
+.merit-box__img {
+  width: 350px;
+  height: 350px;
+}
+@media screen and (max-width: 767px) {
+  .merit-box__img {
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+    width: 200px;
+    height: 200px;
+  }
+}
+.merit-box__img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}

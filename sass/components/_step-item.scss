@@ -1,0 +1,73 @@
+@use "../global/variables" as *;
+@use "../global/mixin" as *;
+
+.c-step-item {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 50px 26px 26px;
+  border: 3px solid $color-base;
+  border-radius: 30px;
+  background-color: $background-base; // Assuming #fff is base background
+  position: relative;
+  text-align: center;
+
+  &--secondary &__icon {
+    background-color: $color-key2;
+  }
+
+  &__icon {
+    position: absolute;
+    top: -45px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background-color: $color-key1;
+    border: 3px solid $color-base;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
+  }
+
+  &__icon-step {
+    font-family: $font-family-en;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 1;
+    letter-spacing: 0.1em;
+    color: $color-base;
+  }
+
+  &__icon-number {
+    font-family: $font-family-en;
+    font-weight: 700;
+    font-size: 34px;
+    line-height: 1;
+    letter-spacing: 0.1em;
+    color: #fff; // Not in variables, using literal
+  }
+
+  &__img {
+    width: 200px;
+    height: 200px;
+
+    @include mq(sp) {
+      width: 160px;
+      height: 160px;
+    }
+  }
+
+  &__text {
+    font-family: $font-family-ja;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.7;
+    letter-spacing: 0.03em;
+    color: $color-base;
+  }
+}

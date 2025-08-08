@@ -1,0 +1,11 @@
+@use "./base/reset";
+@use "./base/base";
+
+// ここにコンポーネント用のファイルを読み込んでいきます
+@use "components/button";
+@use "components/heading";
+@use "components/step-title";
+@use "components/step-item";
+@use "components/step-items";
+@use "components/step-box";
+@use "components/merit-box";

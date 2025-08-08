@@ -1,0 +1,16 @@
+@use "../global/variables" as *;
+@use "../global/mixin" as *;
+
+.step-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 85px;
+  padding: 40px 0;
+  background-color: #FFFBF0;
+
+  @include mq(sp) {
+    gap: 65px;
+    padding: 54px 40px 48px;
+  }
+}

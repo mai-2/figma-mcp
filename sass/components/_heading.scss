@@ -1,0 +1,32 @@
+@use "../global/variables" as *;
+@use "../global/mixin" as *;
+
+.c-heading {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+
+  &__en {
+    font-family: $font-family-en;
+    font-size: 50px;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    line-height: 1;
+
+    @include mq(sp) {
+      font-size: 38px;
+    }
+  }
+
+  &__ja {
+    font-family: $font-family-en;
+    font-size: 16px;
+    letter-spacing: 0.08em;
+    line-height: 1;
+
+    @include mq(sp) {
+      font-size: 14px;
+    }
+  }
+}

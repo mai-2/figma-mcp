@@ -1,0 +1,31 @@
+@use "../global/variables" as *;
+@use "../global/mixin" as *;
+
+.step1-title {
+  display: inline-flex;
+  align-items: flex-end;
+  gap: 10px;
+
+  @include mq(sp) {
+    gap: 16px;
+    align-items: stretch;
+  }
+
+  &__text {
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 1.7;
+    letter-spacing: 0.1em;
+    color: #111111;
+
+    @include mq(sp) {
+      font-size: 18px;
+    }
+  }
+
+  &__img {
+    width: 85px;
+    height: 110px;
+  }
+}

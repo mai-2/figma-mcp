@@ -1,0 +1,819 @@
+@use "../global/variables" as *;
+@use "../global/mixin" as *;
+@use "../components/button";
+@use "../components/heading";
+@use "../components/merit-box";
+
+.l-header {
+  padding: 20px 0;
+
+  @include mq(sp) {
+    padding: 0;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: $width-inner;
+    margin: 0 auto;
+    padding: 0 20px;
+
+    @include mq(sp) {
+      padding: 22px 15px;
+    }
+  }
+
+  &__logo {
+    width: 135px;
+    height: 35px;
+    a {
+      display: block;
+    }
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    @include mq(sp) {
+      width: 100px;
+      height: 26px;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+
+    @include mq(sp) {
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 320px;
+      height: 100%;
+      background-color: #f7ba1a;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-end;
+      padding: 86px 40px;
+      gap: 0;
+      transform: translateX(100%);
+      transition: transform 0.3s ease;
+      z-index: 10;
+
+      &.is-active {
+        transform: translateX(0);
+      }
+    }
+  }
+
+  &__nav-list {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+
+    @include mq(sp) {
+      flex-direction: column;
+      align-items: flex-end;
+      width: 100%;
+      gap: 0;
+      margin-bottom: 14px;
+    }
+  }
+
+  &__nav-item {
+    @include mq(sp) {
+      width: 100%;
+      text-align: right;
+    }
+    a {
+      text-decoration: none;
+      color: $color-base;
+      font-weight: bold;
+
+      @include mq(sp) {
+        display: block;
+        padding: 14px 0;
+        letter-spacing: 0.03em;
+      }
+    }
+  }
+
+  &__hamburger {
+    display: none;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 20;
+
+    @include mq(sp) {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      width: 36px;
+      height: 21px;
+    }
+
+    span {
+      display: block;
+      width: 36px;
+      height: 3px;
+      background-color: $color-base;
+      border-radius: 3px;
+      transition: all 0.3s;
+    }
+
+    &.is-active {
+      span {
+        &:nth-child(1) {
+          transform: translateY(9px) rotate(45deg);
+        }
+        &:nth-child(2) {
+          opacity: 0;
+        }
+        &:nth-child(3) {
+          transform: translateY(-9px) rotate(-45deg);
+        }
+      }
+    }
+    }
+  }
+
+@media (max-width: 767px) {
+  .p-concept {
+    padding: 60px 0;
+  }
+}
+
+.p-movie {
+  padding: 100px 0;
+  background-image: url(../img/movie-bg.png);
+  background-size: contain;
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 56px;
+  }
+
+  &__video {
+    width: 640px;
+    max-width: 100%;
+  }
+
+  &__video-wrapper {
+    position: relative;
+    padding-top: 56.25%; // for 16:9 aspect ratio
+
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.p-how-to-use {
+  padding: 100px 0;
+
+  @include mq(sp) {
+    padding: 60px 15px;
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+    max-width: $width-inner;
+    margin: 0 auto;
+    padding: 0 20px;
+
+    @include mq(sp) {
+      gap: 114px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 75px;
+    width: 100%;
+
+    @include mq(sp) {
+      gap: 112px;
+    }
+  }
+}
+
+// Note: .step-box styles are in components/_step-box.scss
+// Note: .step1-title styles are in components/_step-title.scss
+
+.step2-title {
+  // Based on .step1-title
+  display: inline-flex;
+  position: relative;
+  align-items: flex-end;
+  gap: 10px;
+  padding-left: 95px; // Different from step1-title
+
+  @include mq(sp) {
+    // Mobile styles for step2-title are the same as step1-title mobile
+    gap: 16px;
+    align-items: stretch;
+    padding-left: 0; // Reset padding for mobile layout
+  }
+
+  &__text {
+    font-family: $font-family-ja;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 1.7;
+    letter-spacing: 0.1em;
+    color: $color-base;
+
+    @include mq(sp) {
+      font-size: 18px;
+    }
+  }
+
+  &__img {
+    position: absolute;
+    width: 85px;
+    height: 110px;
+    top: -73px;
+    left: 0; // Different from step1-title
+  }
+}
+
+// Note: .p-step1__items is now .p-step2__items in the HTML, should be styled similarly
+.p-step1__items,
+.p-step2__items {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.p-concept {
+  padding: 50px 0;
+  overflow: hidden;
+
+  @include mq(sp) {
+    padding: 60px 0;
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 176px;
+
+    @include mq(sp) {
+      gap: 150px;
+    }
+  }
+  &__logo {
+    width: 230px;
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    @include mq(sp) {
+      width: 180px;
+    }
+  }
+  &__content {
+    position: relative;
+    width: 800px;
+    height: 800px;
+    border-radius: 50%;
+    background: $color-gradation;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 0 55px 100px;
+
+    @include mq(sp) {
+      width: 1100px;
+      height: 1100px;
+      padding: 0 40px 105px;
+    }
+  }
+  &__img {
+    position: absolute;
+    top: -126px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 330px;
+    height: 370px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    @include mq(sp) {
+      top: -110px;
+      width: 320px;
+    }
+  }
+  &__body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 42px;
+
+    @include mq(sp) {
+      gap: 40px;
+      max-width: 345px;
+    }
+  }
+  &__text {
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 2.3;
+    text-align: center;
+  }
+  &__button-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+
+    @include mq(sp) {
+      gap: 12px;
+    }
+  }
+  &__button-lead {
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 0.08em;
+  }
+}
+
+body.is-active {
+  overflow: hidden;
+}
+
+.p-first-view {
+  margin: 0 30px;
+  border-radius: 30px;
+  background: linear-gradient(180deg, #f8b819 0%, #f0d320 100%);
+  padding: 90px 0 129px;
+
+  @include mq(sp) {
+    margin: 0 15px;
+    padding: 50px 0 0;
+    border-radius: 20px;
+    overflow: hidden;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1040px;
+    margin: 0 auto;
+    padding: 0 20px;
+
+    @include mq(sp) {
+      flex-direction: column;
+      gap: 26px;
+      padding: 0;
+    }
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    @include mq(sp) {
+      gap: 22px;
+      align-items: center;
+      text-align: center;
+    }
+  }
+
+  &__lead {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+
+    @include mq(sp) {
+      gap: 8px;
+    }
+  }
+
+  &__lead-text {
+    display: inline-block;
+    background-color: $background-base;
+    padding: 12px 16px;
+    border-radius: 5px;
+    font-size: 38px;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    line-height: 1;
+
+    @include mq(sp) {
+      font-size: 22px;
+      padding: 10px;
+    }
+  }
+
+  &__description {
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1.7;
+    letter-spacing: 0.03em;
+
+    @include mq(sp) {
+      font-size: 16px;
+    }
+  }
+
+  &__button {
+    @include mq(sp) {
+      order: 1;
+    }
+  }
+
+  &__img {
+    width: 600px;
+    height: 579px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    @include mq(sp) {
+      width: 100%;
+      height: auto;
+      margin-top: 20px;
+    }
+  }
+}
+
+.c-button--primary {
+  background-color: $color-base;
+  color: $background-base;
+  border: 2px solid $background-base;
+}
+
+.p-case {
+  padding: 158px 0 50px;
+
+  @include mq(sp) {
+    padding: 168px 40px 60px;
+  }
+
+  &__inner {
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 54px;
+
+    @include mq(sp) {
+      gap: 30px;
+      padding: 0;
+    }
+  }
+
+  &__title {
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+
+    @include mq(sp) {
+      font-size: 18px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+
+    @include mq(sp) {
+      gap: 15px;
+    }
+  }
+
+  &__item {
+    width: 200px;
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    @include mq(sp) {
+      width: 140px;
+    }
+  }
+}
+
+.p-news {
+  padding: 50px 0;
+
+  @include mq(sp) {
+    padding: 60px 15px;
+  }
+
+  &__inner {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 40px 105px 34px;
+    background-color: $background-base;
+    border-radius: 30px;
+    box-shadow: 0px 9px 30px 0px rgba(244, 244, 244, 1);
+
+    @include mq(sp) {
+      padding: 40px 12px;
+      border-radius: 20px;
+    }
+  }
+
+  &__title {
+    font-family: $font-family-en;
+    font-size: 50px;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    margin-bottom: 30px;
+
+    @include mq(sp) {
+      font-size: 38px;
+      text-align: center;
+      margin-bottom: 28px;
+    }
+  }
+
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__item {
+    border-top: 1px solid #e3e3e3;
+
+    a {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      padding: 12px 0;
+      text-decoration: none;
+      color: $color-base;
+
+      @include mq(sp) {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        padding: 10px 0;
+      }
+    }
+  }
+
+  &__meta {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 232px;
+    flex-shrink: 0;
+
+    @include mq(sp) {
+      width: auto;
+    }
+  }
+
+  &__date {
+    font-size: 16px;
+    color: #333;
+  }
+
+  &__category {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: bold;
+    color: #fff;
+    padding: 2px 10px;
+    border-radius: 2px;
+
+    &--news {
+      background-color: #e4780c;
+    }
+    &--column {
+      background-color: #ecb815;
+      padding: 2px 15px;
+    }
+    &--event {
+      background-color: #389b47;
+    }
+  }
+
+  &__text {
+    font-size: 16px;
+    // 1行で省略
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    @include mq(sp) {
+      white-space: normal;
+    }
+  }
+
+  &__more {
+    text-align: right;
+    margin-top: 20px;
+
+    a {
+      display: inline-block;
+      font-size: 16px;
+      font-weight: bold;
+      color: $color-base;
+      text-decoration: none;
+      border-bottom: 2px solid $color-base;
+      padding-bottom: 10px;
+    }
+
+    @include mq(sp) {
+      text-align: center;
+      margin-top: 22px;
+    }
+  }
+}
+
+.p-movie {
+  padding: 100px 0;
+  background-image: url(../img/movie-bg.png);
+  background-size: contain;
+
+  @include mq(sp) {
+    padding: 60px 15px;
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 56px;
+
+    @include mq(sp) {
+      gap: 32px;
+    }
+  }
+
+  &__video {
+    width: 640px;
+    max-width: 100%;
+
+    @include mq(sp) {
+      width: 100%;
+    }
+  }
+
+  &__video-wrapper {
+    position: relative;
+    padding-top: 56.25%; // for 16:9 aspect ratio
+
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.p-how-to-use {
+  padding: 100px 0;
+
+  @include mq(sp) {
+    padding: 60px 15px;
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+    max-width: $width-inner;
+    margin: 0 auto;
+    padding: 0 20px;
+
+    @include mq(sp) {
+      gap: 114px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 75px;
+    width: 100%;
+
+    @include mq(sp) {
+      gap: 112px;
+    }
+  }
+}
+
+// Note: .step-box styles are in components/_step-box.scss
+// Note: .step1-title styles are in components/_step-title.scss
+
+.step2-title {
+  // Based on .step1-title
+  display: inline-flex;
+  position: relative;
+  align-items: flex-end;
+  gap: 10px;
+  padding-left: 95px; // Different from step1-title
+
+  @include mq(sp) {
+    // Mobile styles for step2-title are the same as step1-title mobile
+    gap: 16px;
+    align-items: stretch;
+    padding-left: 0; // Reset padding for mobile layout
+    font-size: 18px;
+  }
+
+  &__text {
+    font-family: $font-family-ja;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 1.7;
+    letter-spacing: 0.1em;
+    color: $color-base;
+  }
+
+  &__img {
+    position: absolute;
+    width: 85px;
+    height: 110px;
+    top: -73px;
+    left: 0; // Different from step1-title
+  }
+}
+
+// Note: .p-step1__items is now .p-step2__items in the HTML, should be styled similarly
+.p-step1__items,
+.p-step2__items {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.p-merit {
+  background-color: #fafafa;
+  padding: 100px 0;
+
+  @include mq(sp) {
+    padding: 60px 15px;
+  }
+}
+
+.p-merit__inner {
+  max-width: $width-inner;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+
+  @include mq(sp) {
+    padding: 0;
+    gap: 30px;
+  }
+}
+
+.p-merit__list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 100%;
+
+  @include mq(sp) {
+    gap: 44px;
+  }
+}
+
+.merit-box--reverse {
+  .merit-box__content {
+    @include mq(pc) {
+      flex-direction: row-reverse;
+    }
+  }
+}

@@ -1,0 +1,28 @@
+@use "../global/variables" as *;
+@use "../global/mixin" as *;
+
+.p-step1, .p-step2 {
+  padding: 100px 0;
+
+  @include mq(sp) {
+    padding: 60px 0; // Example mobile padding
+  }
+
+  &__inner {
+    max-width: $width-inner;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  &__items {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+
+    @include mq(sp) {
+      flex-direction: column;
+      gap: 65px;
+      align-items: center;
+    }
+  }
+}
