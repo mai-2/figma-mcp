@@ -817,3 +817,46 @@ body.is-active {
     }
   }
 }
+
+.p-cta {
+  background: linear-gradient(180deg, #f8bd1e 0%, #f0d320 100%);
+  padding: 60px 0;
+
+  @include mq(sp) {
+    padding: 50px 30px;
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    max-width: $width-inner;
+    margin: 0 auto;
+    padding: 0 20px;
+
+    @include mq(sp) {
+      padding: 0;
+    }
+  }
+
+  &__text {
+    font-family: $font-family-ja;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.03em;
+    text-align: center;
+    color: $color-base;
+
+    @include mq(sp) {
+      font-size: 16px;
+    }
+  }
+
+  &__button {
+    .c-button {
+      min-width: 200px;
+    }
+  }
+}
