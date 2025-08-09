@@ -1311,3 +1311,129 @@ body.is-active {
 .p-cta__button .c-button {
   min-width: 200px;
 }
+
+.p-price {
+  padding: 100px 0;
+}
+@media screen and (max-width: 767px) {
+  .p-price {
+    padding: 60px 15px;
+  }
+}
+.p-price__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 60px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+@media screen and (max-width: 767px) {
+  .p-price__inner {
+    gap: 41px;
+    padding: 0;
+  }
+}
+.p-price__title {
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1;
+  color: #111;
+}
+@media screen and (max-width: 767px) {
+  .p-price__title {
+    font-size: 20px;
+  }
+}
+.p-price__scroll-text {
+  display: none;
+}
+@media screen and (max-width: 767px) {
+  .p-price__scroll-text {
+    display: block;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1;
+    color: #686868;
+    text-align: center;
+    margin-bottom: 11px;
+  }
+}
+.p-price__table {
+  width: 100%;
+}
+@media screen and (max-width: 767px) {
+  .p-price__table {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .p-price__table::-webkit-scrollbar {
+    height: 8px;
+  }
+  .p-price__table::-webkit-scrollbar-track {
+    background: #f2f2f2;
+    border-radius: 4px;
+  }
+  .p-price__table::-webkit-scrollbar-thumb {
+    background: #c4c4c4;
+    border-radius: 4px;
+  }
+}
+.p-price__table-body {
+  width: 100%;
+  border-collapse: collapse;
+}
+@media screen and (max-width: 767px) {
+  .p-price__table-body {
+    width: 700px;
+  }
+}
+.p-price__table-body th,
+.p-price__table-body td {
+  border-top: 3px solid #111;
+  padding: 20px;
+  text-align: center;
+  vertical-align: middle;
+}
+.p-price__table-body th {
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.7;
+  letter-spacing: 0.03em;
+  color: #111;
+  width: 25%;
+}
+.p-price__table-body td {
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.7;
+  letter-spacing: 0.03em;
+  color: #111;
+}
+.p-price__table-body thead th {
+  border-top: none;
+  font-size: 20px;
+  letter-spacing: 0.1em;
+}
+.p-price__table-body thead img {
+  vertical-align: middle;
+}
+.p-price__table-body tbody tr th {
+  background-color: #fff;
+}
+.p-price__table-body tbody tr td:nth-of-type(1) {
+  background-color: #fff9e5;
+  font-size: 25px;
+}

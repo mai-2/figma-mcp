@@ -860,3 +860,132 @@ body.is-active {
     }
   }
 }
+
+.p-price {
+  padding: 100px 0;
+
+  @include mq(sp) {
+    padding: 60px 15px;
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+
+    @include mq(sp) {
+      gap: 41px;
+      padding: 0;
+    }
+  }
+
+  &__title {
+    font-family: $font-family-ja;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1;
+    color: $color-base;
+
+    @include mq(sp) {
+      font-size: 20px;
+    }
+  }
+
+  &__scroll-text {
+    display: none;
+
+    @include mq(sp) {
+      display: block;
+      font-family: $font-family-ja;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 1;
+      color: #686868;
+      text-align: center;
+      margin-bottom: 11px;
+    }
+  }
+
+  &__table {
+    width: 100%;
+    @include mq(sp) {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+
+      &::-webkit-scrollbar {
+        height: 8px;
+      }
+      &::-webkit-scrollbar-track {
+        background: #f2f2f2;
+        border-radius: 4px;
+      }
+      &::-webkit-scrollbar-thumb {
+        background: #c4c4c4;
+        border-radius: 4px;
+      }
+    }
+  }
+
+  &__table-body {
+    width: 100%;
+    border-collapse: collapse;
+
+    @include mq(sp) {
+      width: 700px;
+    }
+
+    th,
+    td {
+      border-top: 3px solid $color-base;
+      padding: 20px;
+      text-align: center;
+      vertical-align: middle;
+    }
+
+    th {
+      font-family: $font-family-ja;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 1.7;
+      letter-spacing: 0.03em;
+      color: $color-base;
+      width: 25%;
+    }
+
+    td {
+      font-family: $font-family-ja;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 1.7;
+      letter-spacing: 0.03em;
+      color: $color-base;
+    }
+
+    thead {
+      th {
+        border-top: none;
+        font-size: 20px;
+        letter-spacing: 0.1em;
+      }
+      img {
+        vertical-align: middle;
+      }
+    }
+
+    tbody {
+      tr {
+        th {
+          background-color: #fff;
+        }
+        td:nth-of-type(1) {
+          background-color: #fff9e5;
+          font-size: 25px;
+        }
+      }
+    }
+  }
+}
