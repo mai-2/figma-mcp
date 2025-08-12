@@ -989,3 +989,32 @@ body.is-active {
     }
   }
 }
+
+.p-qa {
+  background-color: #fafafa;
+  padding: 100px 0;
+
+  &__inner {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .c-heading {
+    margin-bottom: 74px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 42px;
+  }
+
+  @include mq(sp) {
+    padding: 60px 15px;
+
+    .c-heading {
+      margin-bottom: 52px;
+    }
+  }
+}

@@ -1437,3 +1437,34 @@ body.is-active {
   background-color: #fff9e5;
   font-size: 25px;
 }
+
+.p-qa {
+  background-color: #fafafa;
+  padding: 100px 0;
+}
+.p-qa__inner {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.p-qa .c-heading {
+  margin-bottom: 74px;
+}
+.p-qa__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 42px;
+}
+@media screen and (max-width: 767px) {
+  .p-qa {
+    padding: 60px 15px;
+  }
+  .p-qa .c-heading {
+    margin-bottom: 52px;
+  }
+}
