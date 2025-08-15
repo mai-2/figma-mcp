@@ -1,0 +1,36 @@
+@use "../global/variables" as *;
+@use "../global/mixin" as *;
+
+.c-select-wrapper {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 16px;
+    transform: translateY(-50%);
+    width: 9.26px;
+    height: 6.83px;
+    background-image: url(../img/select-arrow.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    pointer-events: none;
+  }
+}
+
+.c-select {
+  display: inline-block;
+  width: 100%;
+  padding: 14px 42px 14px 16px;
+  border: 3px solid $color-base;
+  border-radius: 5px;
+  background-color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.7;
+  color: $color-base;
+  appearance: none;
+}

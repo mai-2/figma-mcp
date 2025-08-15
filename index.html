@@ -21,6 +21,7 @@
     />
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/components.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   </head>
   <body>
     <header class="l-header">
@@ -396,8 +397,162 @@
           </div>
         </div>
       </section>
+
+      <section class="p-gallery">
+        <div class="p-gallery__inner">
+          <div class="c-heading">
+            <h2 class="c-heading__en">GALLERY</h2>
+            <p class="c-heading__ja">ギャラリー</p>
+          </div>
+          <div class="p-gallery__slider-area">
+            <div class="swiper p-gallery__slider js-gallery-slider">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide p-gallery__slide">
+                  <div class="p-gallery__card">
+                    <img src="./img/gallery-1.png" alt="" class="p-gallery__card-img">
+                    <p class="p-gallery__card-text">最高な海。を拝んでいる私最高...</p>
+                  </div>
+                </div>
+                <div class="swiper-slide p-gallery__slide">
+                  <div class="p-gallery__card">
+                    <img src="./img/gallery-1.png" alt="" class="p-gallery__card-img">
+                    <p class="p-gallery__card-text">最高な海。を拝んでいる私最高...</p>
+                  </div>
+                </div>
+                <div class="swiper-slide p-gallery__slide">
+                  <div class="p-gallery__card">
+                    <img src="./img/gallery-1.png" alt="" class="p-gallery__card-img">
+                    <p class="p-gallery__card-text">最高な海。を拝んでいる私最高...</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-button-prev p-gallery__prev js-gallery-prev">
+              <img src="./img/prev-icon.svg" alt="前へ">
+            </div>
+            <div class="swiper-button-next p-gallery__next js-gallery-next">
+              <img src="./img/next-icon.svg" alt="次へ">
+            </div>
+          </div>
+          <div class="swiper-pagination p-gallery__pagination js-gallery-pagination"></div>
+        </div>
+      </section>
+
+      <section class="p-contact">
+        <div class="p-contact__inner">
+          <div class="p-contact__content">
+            <div class="c-heading">
+              <p class="c-heading__en c-heading__en--contact">CONTACT</p>
+              <h2 class="c-heading__ja c-heading__ja--contact">お問い合わせ</h2>
+            </div>
+            <form class="p-contact__form" action="#">
+              <div class="p-contact__form-box">
+                <div class="p-contact__form-item">
+                  <div class="p-contact__form-head">
+                    <div class="c-form-label">
+                      <span class="c-form-label__text">お名前</span>
+                      <span class="c-form-label__required">必須</span>
+                    </div>
+                  </div>
+                  <div class="p-contact__form-body">
+                    <input type="text" class="c-input-text" placeholder="田中 おは次郎">
+                  </div>
+                </div>
+                <div class="p-contact__form-item">
+                  <div class="p-contact__form-head">
+                    <div class="c-form-label">
+                      <span class="c-form-label__text">メールアドレス</span>
+                      <span class="c-form-label__required">必須</span>
+                    </div>
+                  </div>
+                  <div class="p-contact__form-body">
+                    <input type="email" class="c-input-text" placeholder="info@oha.com">
+                  </div>
+                </div>
+                <div class="p-contact__form-item">
+                  <div class="p-contact__form-head">
+                    <div class="c-form-label">
+                      <span class="c-form-label__text">お問い合わせ種別</span>
+                      <span class="c-form-label__required">必須</span>
+                    </div>
+                  </div>
+                  <div class="p-contact__form-body">
+                    <div class="c-radio-group">
+                      <label class="c-radio">
+                        <input type="radio" name="radio-group" class="c-radio__input" checked>
+                        <span class="c-radio__icon"></span>
+                        <span class="c-radio__label">アプリの質問</span>
+                      </label>
+                      <label class="c-radio">
+                        <input type="radio" name="radio-group" class="c-radio__input">
+                        <span class="c-radio__icon"></span>
+                        <span class="c-radio__label">取材の依頼</span>
+                      </label>
+                      <label class="c-radio">
+                        <input type="radio" name="radio-group" class="c-radio__input">
+                        <span class="c-radio__icon"></span>
+                        <span class="c-radio__label">その他</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="p-contact__form-item">
+                  <div class="p-contact__form-head">
+                    <div class="c-form-label">
+                      <span class="c-form-label__text">担当者名</span>
+                      <span class="c-form-label__tag">任意</span>
+                    </div>
+                  </div>
+                  <div class="p-contact__form-body">
+                    <div class="c-select-wrapper">
+                      <select class="c-select">
+                        <option value="" hidden>選択してください</option>
+                        <option value="1">選択肢1</option>
+                        <option value="2">選択肢2</option>
+                        <option value="3">選択肢3</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="p-contact__form-item">
+                  <div class="p-contact__form-head">
+                    <div class="c-form-label">
+                      <span class="c-form-label__text">お問い合わせ内容</span>
+                      <span class="c-form-label__required">必須</span>
+                    </div>
+                  </div>
+                  <div class="p-contact__form-body">
+                    <textarea class="c-textarea" placeholder="ここに文章を入力してくださいここに文章を入力してください"></textarea>
+                  </div>
+                </div>
+              </div>
+              <div class="p-contact__privacy">
+                <label class="c-checkbox">
+                  <input type="checkbox" class="c-checkbox__input">
+                  <span class="c-checkbox__icon"></span>
+                  <span class="c-checkbox__label">プライバシーポリシーに同意する</span>
+                </label>
+              </div>
+              <div class="p-contact__button">
+                <input type="submit" class="c-button" value="送信する">
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
     </main>
 
+    <footer class="l-footer">
+      <div class="l-footer__inner">
+        <small class="l-footer__copyright">COPYRIGHT 2023 株式会社デイトラ</small>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./js/script.js"></script>
+    <a href="#" class="to-top js-to-top">
+      <img src="./img/to-top.svg" alt="トップへ戻る" width="76" height="93" />
+    </a>
   </body>
 </html>

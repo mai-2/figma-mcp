@@ -1,0 +1,42 @@
+@use "../global/variables" as *;
+@use "../global/mixin" as *;
+
+.c-checkbox {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.c-checkbox__input {
+  display: none;
+}
+
+.c-checkbox__icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 1px solid $color-base;
+  border-radius: 1px;
+  position: relative;
+}
+
+.c-checkbox__input:checked + .c-checkbox__icon::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 23px;
+  height: 17.53px;
+  background-image: url(../img/checkbox-check.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.c-checkbox__label {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.7;
+  color: $color-base;
+}

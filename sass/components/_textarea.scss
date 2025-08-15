@@ -1,0 +1,20 @@
+@use "../global/variables" as *;
+@use "../global/mixin" as *;
+
+.c-textarea {
+  display: inline-block;
+  width: 100%;
+  height: 180px;
+  padding: 14px 16px;
+  border: 3px solid $color-base;
+  border-radius: 5px;
+  background-color: #fff;
+  font-size: 16px;
+  line-height: 1.7;
+  color: $color-base;
+  resize: vertical;
+
+  &::placeholder {
+    color: #adadad;
+  }
+}

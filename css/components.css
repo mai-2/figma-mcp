@@ -589,3 +589,240 @@ body {
   -o-object-fit: cover;
      object-fit: cover;
 }
+
+.c-input-text {
+  display: inline-block;
+  width: 100%;
+  padding: 14px 16px;
+  border: 3px solid #111;
+  border-radius: 5px;
+  background-color: #fff;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #111;
+}
+.c-input-text::-webkit-input-placeholder {
+  color: #adadad;
+}
+.c-input-text::-moz-placeholder {
+  color: #adadad;
+}
+.c-input-text:-ms-input-placeholder {
+  color: #adadad;
+}
+.c-input-text::-ms-input-placeholder {
+  color: #adadad;
+}
+.c-input-text::placeholder {
+  color: #adadad;
+}
+
+.c-radio-group {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 30px;
+}
+
+.c-radio {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 4px;
+  cursor: pointer;
+}
+
+.c-radio__input {
+  display: none;
+}
+
+.c-radio__icon {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  border: 3px solid #111;
+  border-radius: 50%;
+  position: relative;
+}
+
+.c-radio__input:checked + .c-radio__icon::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  background-color: #f5810e;
+  border-radius: 50%;
+}
+
+.c-radio__label {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.48;
+  color: #111;
+}
+
+.c-select-wrapper {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+}
+.c-select-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 9.26px;
+  height: 6.83px;
+  background-image: url(../img/select-arrow.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  pointer-events: none;
+}
+
+.c-select {
+  display: inline-block;
+  width: 100%;
+  padding: 14px 42px 14px 16px;
+  border: 3px solid #111;
+  border-radius: 5px;
+  background-color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.7;
+  color: #111;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+.c-textarea {
+  display: inline-block;
+  width: 100%;
+  height: 180px;
+  padding: 14px 16px;
+  border: 3px solid #111;
+  border-radius: 5px;
+  background-color: #fff;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #111;
+  resize: vertical;
+}
+.c-textarea::-webkit-input-placeholder {
+  color: #adadad;
+}
+.c-textarea::-moz-placeholder {
+  color: #adadad;
+}
+.c-textarea:-ms-input-placeholder {
+  color: #adadad;
+}
+.c-textarea::-ms-input-placeholder {
+  color: #adadad;
+}
+.c-textarea::placeholder {
+  color: #adadad;
+}
+
+.to-top {
+  display: inline-block;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 10;
+  width: 76px;
+  height: 93px;
+}
+@media screen and (max-width: 767px) {
+  .to-top {
+    right: 10px;
+    bottom: 10px;
+    width: 60px;
+    height: auto;
+  }
+}
+
+.c-checkbox {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.c-checkbox__input {
+  display: none;
+}
+
+.c-checkbox__icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #111;
+  border-radius: 1px;
+  position: relative;
+}
+
+.c-checkbox__input:checked + .c-checkbox__icon::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 23px;
+  height: 17.53px;
+  background-image: url(../img/checkbox-check.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.c-checkbox__label {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.7;
+  color: #111;
+}
+
+.c-form-label {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+}
+
+.c-form-label__text {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.48;
+  color: #111;
+}
+
+.c-form-label__required {
+  display: inline-block;
+  padding: 5px 9px;
+  background-color: #ee8013;
+  border-radius: 2px;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.18em;
+  color: #fff;
+}

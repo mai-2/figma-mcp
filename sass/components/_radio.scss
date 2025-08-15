@@ -1,0 +1,47 @@
+@use "../global/variables" as *;
+@use "../global/mixin" as *;
+
+.c-radio-group {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.c-radio {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+}
+
+.c-radio__input {
+  display: none;
+}
+
+.c-radio__icon {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  border: 3px solid $color-base;
+  border-radius: 50%;
+  position: relative;
+}
+
+.c-radio__input:checked + .c-radio__icon::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  background-color: #f5810e;
+  border-radius: 50%;
+}
+
+.c-radio__label {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.48;
+  color: $color-base;
+}

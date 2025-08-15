@@ -12,4 +12,27 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   }
+
+  const gallerySwiper = new Swiper('.js-gallery-slider', {
+    loop: true,
+    pagination: {
+      el: '.js-gallery-pagination',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.js-gallery-next',
+      prevEl: '.js-gallery-prev',
+    },
+  });
+
+  const toTop = document.querySelector(".js-to-top");
+  if (toTop) {
+    toTop.addEventListener("click", (e) => {
+      e.preventDefault();
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    });
+  }
 });
